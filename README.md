@@ -8,7 +8,7 @@ To run the code:
     use "run.sh" to run the code and you can use 'gen_input.sh' to generate fake tweet for testing. There will be three options
     [1] for calculating feature 1 and 2 use single thread(for small amount of data, ~500000)
     [2] for calculating feature 1 and 2 using multi thread(recommended for large data)
-    [3] for cleaning all the data
+    [3] for cleaning all the data (if it says "file can not be remove due to not existing", you are still good. It means the file has been removed previously)
 
 Design Idea:
     (1) First try MySQL to store calculated result (db_manager.py), but it is slow
