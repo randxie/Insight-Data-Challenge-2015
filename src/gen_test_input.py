@@ -15,8 +15,8 @@ words = response.content.splitlines()
 # adjustable parameters
 MaxWordSize=len(words)      # length of corpus
 MaxTweetLength=50           # max word number contain in one tweet
-MaxTweetNumber=10       # max number of tweet
-ProgressLine=10          # print out progress at multiple of certain line
+MaxTweetNumber=500       # max number of tweet
+ProgressLine=10000          # print out progress at multiple of certain line
 start_time = time.time()    # get start time
 
 # start generating fake input

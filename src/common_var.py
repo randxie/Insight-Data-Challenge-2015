@@ -30,7 +30,7 @@ s_para['storage_filename']=storage_filename         # define storage file
 f_para={}
 f_para['in_file']=in_file                           # define input files
 # adjustable parameters
-f_para['line_to_print']=20000                      # print progress every XXXX lines
+f_para['line_to_print']=100000                      # print progress every XXXX lines
 f_para['line_to_save']=5*f_para['line_to_print']    # save intermediate calculation result every XXXX lines
 
 # log file
