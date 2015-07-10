@@ -28,7 +28,7 @@ About output:
     feature 1: use "\t" to separate word and number of appearance
 
 Some test results:
-200000: single: 8.5538s multiple: 14.0397086s
-500000: single:36s  multiple: 26.7449s
-1000000: single: 144.865358829s multiple: 91.3351509571s
+(1) 200000: single: 8.5538s multiple: 14.0397086s;
+(2) 500000: single:36s  multiple: 26.7449s;
+(3) 1000000: single: 144.865358829s multiple: 91.3351509571s;
 
