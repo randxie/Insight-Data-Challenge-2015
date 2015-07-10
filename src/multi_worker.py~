@@ -132,7 +132,7 @@ class multi_worker():
     def save_feature(self):
         tmpdict={'word_storage':self.total_word_storage,'indiv_word_arr':self.total_indiv_word_arr,\
                 'median_arr':self.total_median_arr,'last_word_pos':self.last_pos,\
-                'unsorted_indiv_word_arr':self.total_unsorted_indiv_word_arr}
+                'unsorted_indiv_word_arr':self.unsorted_indiv_word_arr}
         pickle.dump(tmpdict,open(os.path.join(os.getcwd(),self.total_storage_name),'wb'))
 
     def add_logging(self,str):

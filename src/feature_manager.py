@@ -28,7 +28,7 @@ class feature_manager():
             #read in past data
             with open(self.storage_filename,'rb') as f:
                 data=pickle.load(f)
-                self.unsorted_indiv_word_arr=data['self.unsorted_indiv_word_arr']
+                self.unsorted_indiv_word_arr=data['unsorted_indiv_word_arr']
                 self.word_storage=data['word_storage']
                 self.indiv_word_arr=data['indiv_word_arr']
                 self.median_arr=data['median_arr']
@@ -101,7 +101,7 @@ class feature_manager():
         if not self.is_save:
             tmpdict={'word_storage':self.word_storage,'indiv_word_arr':self.indiv_word_arr,\
                     'median_arr':self.median_arr,'last_word_pos':self.last_word_pos,\
-                    'self.unsorted_indiv_word_arr':self.unsorted_indiv_word_arr}
+                    'unsorted_indiv_word_arr':self.unsorted_indiv_word_arr}
             pickle.dump(tmpdict,open(os.path.join(os.getcwd(),self.storage_filename),'wb'))
         self.is_save=True
         self.add_logging('finish saving')
