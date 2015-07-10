@@ -1,0 +1,79 @@
+07-10 15:13 root         INFO     multi-worker: Run things in parallel
+07-10 15:13 root         INFO     multi-worker: tail.txt already splitted, finish un-done job firstly
+07-10 15:13 root         INFO     multi-worker: splitting the txt into small pieces
+07-10 15:13 root         INFO     start to calculate feature in parallel
+07-10 15:13 root         INFO     worker 0: start estimating workload
+07-10 15:13 root         INFO     worker 1: start estimating workload
+07-10 15:13 root         INFO     worker 2: start estimating workload
+07-10 15:13 root         INFO     worker 3: start estimating workload
+07-10 15:13 root         INFO     worker 4: start estimating workload
+07-10 15:13 root         INFO     worker 5: start estimating workload
+07-10 15:13 root         INFO     worker 0: total tweet number is 1
+07-10 15:13 root         INFO     worker 2: total tweet number is 1
+07-10 15:13 root         INFO     worker 1: total tweet number is 1
+07-10 15:13 root         INFO     worker 3: total tweet number is 1
+07-10 15:13 root         INFO     worker 0: lastly loaded tweet is in line: 1
+07-10 15:13 root         INFO     worker 4: total tweet number is 1
+07-10 15:13 root         INFO     worker 2: lastly loaded tweet is in line: 1
+07-10 15:13 root         INFO     worker 1: lastly loaded tweet is in line: 1
+07-10 15:13 root         INFO     worker 3: lastly loaded tweet is in line: 1
+07-10 15:13 root         INFO     worker 0: starting at 0.000000%
+07-10 15:13 root         INFO     worker 5: total tweet number is 1
+07-10 15:13 root         INFO     worker 4: lastly loaded tweet is in line: 1
+07-10 15:13 root         INFO     worker 2: starting at 0.000000%
+07-10 15:13 root         INFO     worker 1: starting at 0.000000%
+07-10 15:13 root         INFO     worker 3: starting at 0.000000%
+07-10 15:13 root         INFO     worker 0: go to the tweet loaded last time
+07-10 15:13 root         INFO     worker 4: starting at 0.000000%
+07-10 15:13 root         INFO     worker 5: lastly loaded tweet is in line: 1
+07-10 15:13 root         INFO     worker 2: go to the tweet loaded last time
+07-10 15:13 root         INFO     worker 1: go to the tweet loaded last time
+07-10 15:13 root         INFO     worker 3: go to the tweet loaded last time
+07-10 15:13 root         INFO     worker 4: go to the tweet loaded last time
+07-10 15:13 root         INFO     worker 5: starting at 0.000000%
+07-10 15:13 root         INFO     worker 5: go to the tweet loaded last time
+07-10 15:13 root         INFO     worker 0: finish saving
+07-10 15:13 root         INFO     worker 0: finished 100.000000%
+07-10 15:13 root         INFO     worker 0: feature calculation takes time: 0.00418591499329 second
+07-10 15:13 root         INFO     worker 6: start estimating workload
+07-10 15:13 root         INFO     worker 3: finish saving
+07-10 15:13 root         INFO     worker 1: finish saving
+07-10 15:13 root         INFO     worker 3: finished 100.000000%
+07-10 15:13 root         INFO     worker 4: finish saving
+07-10 15:13 root         INFO     worker 5: finish saving
+07-10 15:13 root         INFO     worker 1: finished 100.000000%
+07-10 15:13 root         INFO     worker 3: feature calculation takes time: 0.00716614723206 second
+07-10 15:13 root         INFO     worker 4: finished 100.000000%
+07-10 15:13 root         INFO     worker 2: finish saving
+07-10 15:13 root         INFO     worker 5: finished 100.000000%
+07-10 15:13 root         INFO     worker 7: start estimating workload
+07-10 15:13 root         INFO     worker 5: feature calculation takes time: 0.00722599029541 second
+07-10 15:13 root         INFO     worker 6: total tweet number is 1
+07-10 15:13 root         INFO     worker 4: feature calculation takes time: 0.00813794136047 second
+07-10 15:13 root         INFO     worker 2: finished 100.000000%
+07-10 15:13 root         INFO     worker 1: feature calculation takes time: 0.0100240707397 second
+07-10 15:13 root         INFO     worker 6: lastly loaded tweet is in line: 1
+07-10 15:13 root         INFO     worker 2: feature calculation takes time: 0.0119109153748 second
+07-10 15:13 root         INFO     worker 8: start estimating workload
+07-10 15:13 root         INFO     worker 6: starting at 0.000000%
+07-10 15:13 root         INFO     worker 6: go to the tweet loaded last time
+07-10 15:13 root         INFO     worker 7: total tweet number is 1
+07-10 15:13 root         INFO     worker 7: lastly loaded tweet is in line: 1
+07-10 15:13 root         INFO     worker 7: starting at 0.000000%
+07-10 15:13 root         INFO     worker 7: go to the tweet loaded last time
+07-10 15:13 root         INFO     worker 6: finish saving
+07-10 15:13 root         INFO     worker 6: finished 100.000000%
+07-10 15:13 root         INFO     worker 6: feature calculation takes time: 0.00161004066467 second
+07-10 15:13 root         INFO     worker 8: total tweet number is 1
+07-10 15:13 root         INFO     worker 7: finish saving
+07-10 15:13 root         INFO     worker 8: lastly loaded tweet is in line: 1
+07-10 15:13 root         INFO     worker 7: finished 100.000000%
+07-10 15:13 root         INFO     worker 8: starting at 0.000000%
+07-10 15:13 root         INFO     worker 7: feature calculation takes time: 0.0026421546936 second
+07-10 15:13 root         INFO     worker 8: go to the tweet loaded last time
+07-10 15:13 root         INFO     worker 8: finish saving
+07-10 15:13 root         INFO     worker 8: finished 100.000000%
+07-10 15:13 root         INFO     worker 8: feature calculation takes time: 0.000497102737427 second
+07-10 15:13 root         INFO     multi-worker: Total feature calculation takes time: 0.116726875305 second
+07-10 15:13 root         INFO     start output features 1
+07-10 15:13 root         INFO     start output features 2
