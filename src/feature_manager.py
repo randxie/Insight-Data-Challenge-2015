@@ -112,7 +112,6 @@ class feature_manager():
 
     # delete tmp file and output files
     def __delete_all__(self):
-        logging.warning ('Deleted all data')
         os.system("rm "+os.path.join(os.getcwd(),self.storage_filename)+' '+\
                   os.path.join(os.getcwd(),output_dir,feature2_txt_name)+' '+\
                   os.path.join(os.getcwd(),output_dir,feature1_txt_name))

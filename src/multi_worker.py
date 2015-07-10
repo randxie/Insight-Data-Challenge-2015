@@ -52,11 +52,6 @@ class multi_worker():
         self.add_logging('Total feature calculation takes time: %s second' %str(elapsed_time))
         self.save_feature()
 
-    # clean temporary files
-    def clean_tmp_file(self):
-        os.system('rm %s'%(os.path.join(os.getcwd(),storage_dir_txt,'*')))
-        os.system('rm %s'%(os.path.join(os.getcwd(),storage_dir_p,'*')))
-
     # calculate features in parallel
     def process_data_par(self):
         logging.info ('start to calculate feature in parallel')
@@ -137,3 +132,5 @@ class multi_worker():
 
     def add_logging(self,str):
         logging.info('multi-worker: '+str)
+
+

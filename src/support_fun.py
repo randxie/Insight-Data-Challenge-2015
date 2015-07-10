@@ -1,7 +1,7 @@
 __author__ = 'randxie'
 # functions that support other modules
 import logging, os
-from common_var import log_file, output_dir, feature1_txt_name, feature2_txt_name
+from common_var import log_file, output_dir, feature1_txt_name, feature2_txt_name, storage_dir_p, storage_dir_txt
 
 def set_logging_config():
     # set up logging to file - see previous section for more details
@@ -46,3 +46,8 @@ def output_feature2(median_arr):
     out_file=os.path.join(os.getcwd(),output_dir,feature2_txt_name)
     with open(out_file,'w') as f:
         f.writelines("%s\n" % item for item in median_arr)
+
+# clean temporary files
+def clean_tmp_file():
+    os.system('rm %s'%(os.path.join(os.getcwd(),storage_dir_txt,'*')))
+    os.system('rm %s'%(os.path.join(os.getcwd(),storage_dir_p,'*')))

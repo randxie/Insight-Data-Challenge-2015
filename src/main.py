@@ -3,7 +3,7 @@ __author__ = 'randxie'
 from feature_manager import feature_manager
 from multi_worker import multi_worker
 from common_var import s_para, f_para
-from support_fun import set_logging_config, output_feature1, output_feature2
+from support_fun import set_logging_config, output_feature1, output_feature2, clean_tmp_file
 
 # set logging config
 set_logging_config()
@@ -29,15 +29,15 @@ def main():
         output_feature1(m_worker.total_word_storage)
         output_feature2(m_worker.total_median_arr)
         # clean temporary file
-        m_worker.clean_tmp_file()
+        clean_tmp_file()
     # for delete all features
     elif tmp == '3':
         confirm =  raw_input('[WARNING] It will deleted all data. Are you sure that you want to continue(y/n)??')
         if confirm.lower() == 'y':
             f_manager=feature_manager(s_para)
-            m_worker=multi_worker(s_para)
             f_manager.__delete_all__()
-            m_worker.clean_tmp_file()
+            clean_tmp_file()
+            print 'data are deleted'
 
 if __name__ == "__main__":
     main()
