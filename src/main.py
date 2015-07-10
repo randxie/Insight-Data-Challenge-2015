@@ -35,8 +35,8 @@ def main():
         confirm =  raw_input('[WARNING] It will deleted all data. Are you sure that you want to continue(y/n)??')
         if confirm.lower() == 'y':
             f_manager=feature_manager(s_para)
-            f_manager.__delete_all__()
             m_worker=multi_worker(s_para)
+            f_manager.__delete_all__()
             m_worker.clean_tmp_file()
 
 if __name__ == "__main__":
