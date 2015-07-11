@@ -23,13 +23,13 @@ use "run.sh" to run the code and use 'gen_input.sh' to generate fake tweet for t
 - **Find median** <br />
     use bisect.insort to sort the median array [o(log(n) complexity] so that it can find median in o(1)
 - **Implementation detail** <br />
-    feature calculation, intermediate result storage and record of progress are done in feature_manager.py <br />
-    It can resume unfinished work as long as it trigger the save condition (every 500,000 lines) by default <br />
+    calculation, result storage and progress recording are done in feature_manager.py <br />
+    It can resume unfinished work (every 500,000 lines by default) <br />
 - **Test input** <br />
     "gen_test_input.py" is used to generate random strings for testing purpose <br />
 - **Parallel computing** <br />
-    to deal with large data (GB size), "multi_worker.py" is used to calculate features in parallel. Use 6 thread by default <br />
-    for large text file, I will split it into multiple small chunks for processing (15 small chunks by default)
+    to deal with large data, "multi_worker.py" do things in parallel.(6 thread by default) <br />
+    for large file, split it into multiple small chunks for processing (15 small chunks by default) <br />
 - **Customize setting** <br />
     please edit setting in "common_var.py" <br />
 
@@ -38,7 +38,7 @@ use "run.sh" to run the code and use 'gen_input.sh' to generate fake tweet for t
 - I assume previous tweets are not modified and every new tweet come in the end of "tweets.txt" <br />
 - The code will record the number of tweet that has been parsed, neglected those have been parsed <br />
 - It can not deal with modification of previous tweet, but this function can be added easily <br />
-- **Please clear data before switching between option 1(single worker) and option 2(multiple worker)** <br />
+- **Please clear data before switching between single worker and multiple workers** <br />
 
 #Some test results: <br />
 The result is tested on a Lenovo W540 (i7, 8GB). The test inputs are random strings
