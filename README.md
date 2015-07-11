@@ -10,9 +10,9 @@ The program is implemented in linux, need "split" and "wc" command. For windows 
 #To run the code: <br />
 
 use "run.sh" to run the code and use 'gen_input.sh' to generate fake tweet for testing if necessary. There will be three options <br />
-[1] for calculating feature 1 and 2 use single thread(for small amount of data,~500,000 lines of tweet) <br />
-[2] for calculating feature 1 and 2 using multi thread(recommended for large data) <br />
-[3] for cleaning all the data (if it says "file can not be remove due to not existing", you are still good. It means the file has been removed previously) <br />
+[1] calculate feature 1 and 2 use single thread (for small amount of data,~500,000 lines of tweet) <br />
+[2] calculate feature 1 and 2 using multi thread (recommended for large data) <br />
+[3] clean all the data (if it says "rm: cannot remove '/*’: No such file or directory", you are still good. It means the file has been removed previously) <br />
 
 #Design Idea: <br />
 
