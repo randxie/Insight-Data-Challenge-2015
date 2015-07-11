@@ -10,7 +10,7 @@ The program is implemented in linux, need "split" and "wc" command. For windows 
 #To run the code: <br />
 
 use "run.sh" to run the code and use 'gen_input.sh' to generate fake tweet for testing if necessary. There will be three options <br />
-[1] for calculating feature 1 and 2 use single thread(for small amount of data,~500000 lines of tweet) <br />
+[1] for calculating feature 1 and 2 use single thread(for small amount of data,~500,000 lines of tweet) <br />
 [2] for calculating feature 1 and 2 using multi thread(recommended for large data) <br />
 [3] for cleaning all the data (if it says "file can not be remove due to not existing", you are still good. It means the file has been removed previously) <br />
 
@@ -23,11 +23,13 @@ use "run.sh" to run the code and use 'gen_input.sh' to generate fake tweet for t
 - **Find median** <br />
     use bisect.insort to sort the median array [o(log(n) complexity] so that it can find median in o(1)
 - **Implementation detail** <br />
-    feature calculation, intermediate result storage and record of lastly parsd position are done in feature_manager.py will<br />
+    feature calculation, intermediate result storage and record of progress are done in feature_manager.py <br />
+    It can resume unfinished work as long as it trigger the save condition (every 500,000 lines) by default <br />
 - **Test input** <br />
     "gen_test_input.py" is used to generate random strings for testing purpose <br />
 - **Parallel computing** <br />
-    to deal with large data (GB size), "multi_worker.py" is used to calculate features in parallel <br />
+    to deal with large data (GB size), "multi_worker.py" is used to calculate features in parallel. Use 6 thread by default <br />
+    for large text file, I will split it into multiple small chunks for processing (15 small chunks by default)
 - **Customize setting** <br />
     please edit setting in "common_var.py" <br />
 
@@ -39,9 +41,10 @@ use "run.sh" to run the code and use 'gen_input.sh' to generate fake tweet for t
 - **Please clear data before switching between option 1(single worker) and option 2(multiple worker)** <br />
 
 #Some test results: <br />
+The result is tested on a Lenovo W540 (i7, 8GB). The test inputs are random strings
 | Number of lines        | Single worker           | Multiple worker (6 threads)  |
 | ------------- |:-------------:| -----:|
-| 200000      | 8.5538s | 14.0397086s |
-| 500000      | 36s      |   26.7449s |
-| 1000000 | 144.865358829s      |    91.3351509571s |
+| 200,000      | 8.5538s | 14.0397086s |
+| 500,000      | 36s      |   26.7449s |
+| 1,000,000 | 144.865358829s      |    91.3351509571s |
 
