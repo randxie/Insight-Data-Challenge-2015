@@ -41,7 +41,9 @@ use "run.sh" to run the code and use 'gen_input.sh' to generate fake tweet for t
 - **Please clear data before switching between single worker and multiple workers** <br />
 
 #Some test results: <br />
+
 The result is tested on a Lenovo W540 (i7, 8GB). The test inputs are random strings
+
 | Number of lines        | Single worker           | Multiple worker (6 threads)  |
 | ------------- |:-------------:| -----:|
 | 200,000      | 8.5538s | 14.0397086s |
