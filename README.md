@@ -36,7 +36,7 @@ use "run.sh" to run the code and use 'gen_input.sh' to generate fake tweet for t
 #IMPORTANT NOTE: <br />
 
 - I assume previous tweets are not modified and every new tweet come in the end of "tweets.txt" <br />
-- The code will record the number of tweet that has been parsed, neglected those have been parsed <br />
+- The code will record the number of tweet that has been parsed, neglected those parsed <br />
 - It can not deal with modification of previous tweet, but this function can be added easily <br />
 - **Please clear data before switching between single worker and multiple workers** <br />
 
