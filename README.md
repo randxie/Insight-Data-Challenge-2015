@@ -19,9 +19,9 @@ use "run.sh" to run the code and use 'gen_input.sh' to generate fake tweet for t
 - **For storage** <br />
     use dictionary and list in python to store counted word and median, cPickle is used to store final results
 - **For word count** <br />
-    use collections.Counter for counting, split tweet by space
+    use collections.Counter for counting, split tweet by space. After parsing, merge two dictionary together
 - **Find median** <br />
-    use bisect.insort to sort the median array [o(log(n) complexity] so that it can find median in o(1)
+    use bisect.insort to sort the median array [o(nlog(n)) complexity] so that it can find median in o(1)
 - **Implementation detail** <br />
     calculation, result storage and progress recording are done in feature_manager.py <br />
     It can resume unfinished work (every 500,000 lines by default) <br />
