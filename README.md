@@ -1,8 +1,8 @@
 The program is designed for Insight Data Engineering Code Challenge.
 
-Software requirement:
-    Require python 2.7, collections, requests.
-    Code is implemented in linux, need "split" command. For windows user, please use cygwin
+Software requirement: <br />
+    Require python 2.7, collections, requests. <br />
+    Code is implemented in linux, need "split" command. For windows user, please use cygwin <br />
 
 To run the code:
     use "run.sh" to run the code and you can use 'gen_input.sh' to generate fake tweet for testing. There will be three options

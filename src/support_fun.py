@@ -39,7 +39,7 @@ def output_feature1(word_storage):
     out_file=os.path.join(os.getcwd(),output_dir,feature1_txt_name)
     with open(out_file, "w") as f:
         for key in sorted(word_storage):
-            f.writelines('%s\t%d\n' %(key,word_storage[key]))
+            f.writelines('%-30s %-5d\n' %(key,word_storage[key]))
 
 # write second feature to txt
 def output_feature2(median_arr):

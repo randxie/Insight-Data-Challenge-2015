@@ -1,0 +1,4 @@
+07-10 22:39 root         INFO     multi-worker: Run things in parallel
+07-10 22:39 root         INFO     multi-worker: Total feature calculation takes time: 0.00940489768982 second
+07-10 22:39 root         INFO     start output features 1
+07-10 22:39 root         INFO     start output features 2
