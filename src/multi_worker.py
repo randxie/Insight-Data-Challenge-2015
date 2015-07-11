@@ -8,6 +8,7 @@ from multiprocessing.dummy import Pool as ThreadPool
 from support_fun import get_file_line
 
 class multi_worker():
+
     # initialization
     def __init__(self,s_para):
         self.main_f_manager=feature_manager(s_para)
@@ -31,23 +32,27 @@ class multi_worker():
         start_time = time.time()
         in_file=f_para['in_file']
         num_lines=get_file_line(in_file)
+
         # cut file in to head(analyzed before) and tail(haven't been analyzed)
         if not self.check_head_tail():
             os.system('head -n %d %s > %s' %(self.last_pos,in_file,head_file))
             os.system('tail -n %d %s > %s'%(num_lines-self.last_pos,in_file,tail_file))
         else:
             self.add_logging('head.txt and tail.txt exists, finish finished un-done job firstly')
+
         # un-analyzed line numbers
         tail_num_lines=get_file_line(tail_file)
         split_num_line=math.ceil(tail_num_lines*1.0/num_of_split_file)
+
+        # if there are tweets to separate, split the file and perform calculation
         if split_num_line:
             self.suffix_length=len(str(int(tail_num_lines*1.0/split_num_line)))
             if not self.check_split():
                 self.add_logging('tail.txt already splitted, finish un-done job firstly')
                 self.multi_split_txt(tail_file,split_num_line)
             self.get_split_file_num()
-            self.process_data_par()
-            self.concatenate_results()
+            self.process_data_par()         # calculate features for splitted txt
+            self.concatenate_results()      # merge the resuls
         elapsed_time = time.time() - start_time
         self.add_logging('Total feature calculation takes time: %s second' %str(elapsed_time))
         self.save_feature()
@@ -69,12 +74,14 @@ class multi_worker():
         p.close()
         p.join()
 
+    # check whether head.txt and tail.txt exist
     def check_head_tail(self):
         for name in os.listdir(os.path.join(os.getcwd(),storage_dir_txt)):
             if 'head.txt' in name:
                 return True
         return False
 
+    # check whether the split exist
     def check_split(self):
         for name in os.listdir(os.path.join(os.getcwd(),storage_dir_p)):
             if 'data_storage' in name:
@@ -130,6 +137,7 @@ class multi_worker():
                 'unsorted_indiv_word_arr':self.total_unsorted_indiv_word_arr}
         pickle.dump(tmpdict,open(os.path.join(os.getcwd(),self.total_storage_name),'wb'))
 
+    # add logging
     def add_logging(self,str):
         logging.info('multi-worker: '+str)
 

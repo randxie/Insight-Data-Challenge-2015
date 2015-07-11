@@ -3,8 +3,9 @@ __author__ = 'randxie'
 import logging, os
 from common_var import log_file, output_dir, feature1_txt_name, feature2_txt_name, storage_dir_p, storage_dir_txt
 
+# set up logging to file
 def set_logging_config():
-    # set up logging to file - see previous section for more details
+
     logging.basicConfig(level=logging.DEBUG,
                         format='%(asctime)s %(name)-12s %(levelname)-8s %(message)s',
                         datefmt='%m-%d %H:%M',

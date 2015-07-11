@@ -107,6 +107,7 @@ class feature_manager():
         self.is_save=True
         self.add_logging('finish saving')
 
+    # print information to screen and add to logging file
     def add_logging(self,str):
         logging.info(self.worker_no+': '+str)
 
